@@ -1,5 +1,12 @@
 # heroku-buildpack-php CHANGELOG
 
+## v??? (2021-??-??)
+
+### CHG
+
+- Ignore `$WEB_CONCURRENCY` on boot if variable `$WEB_CONCURRENCY_SET_BY` indicates it was calculated by another buildpack [David Zuelke]
+- Set `$WEB_CONCURRENCY_SET_BY` in the environment on web boot if it's a calculated value [David Zuelke]
+
 ## v190 (2021-03-04)
 
 ### ADD
