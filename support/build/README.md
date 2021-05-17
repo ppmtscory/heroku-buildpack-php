@@ -677,7 +677,7 @@ Build the base Docker images from the buildpack for all stacks:
 
 Create a `heroku-20.Dockerfile` with the following contents:
 
-    FROM formulatest-heroku-20:latest
+    FROM php-heroku-20:latest
     ENV WORKSPACE_DIR=/app
     ENV UPSTREAM_S3_BUCKET=lang-php
     ENV UPSTREAM_S3_PREFIX=dist-heroku-20-stable/
@@ -685,7 +685,7 @@ Create a `heroku-20.Dockerfile` with the following contents:
 
 Create a `heroku-18.Dockerfile` with the following contents:
 
-    FROM formulatest-heroku-18:latest
+    FROM php-heroku-18:latest
     ENV WORKSPACE_DIR=/app
     ENV UPSTREAM_S3_BUCKET=lang-php
     ENV UPSTREAM_S3_PREFIX=dist-heroku-18-stable/
@@ -693,7 +693,7 @@ Create a `heroku-18.Dockerfile` with the following contents:
 
 Create a `heroku-16.Dockerfile` with the following contents:
 
-    FROM formulatest-heroku-16:latest
+    FROM php-heroku-16:latest
     ENV WORKSPACE_DIR=/app
     ENV UPSTREAM_S3_BUCKET=lang-php
     ENV UPSTREAM_S3_PREFIX=dist-heroku-16-stable/
