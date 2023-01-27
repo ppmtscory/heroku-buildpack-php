@@ -1,11 +1,473 @@
 # heroku-buildpack-php CHANGELOG
 
-## v193 (2021-06-??)
+## v229 (2023-01-25)
+
+### ADD
+
+- PHP/8.2.1 [David Zuelke]
+
+## v228 (2023-01-25)
+
+### ADD
+
+- ext-mongodb/1.15.0 [David Zuelke]
+- PHP/8.0.27 [David Zuelke]
+- PHP/8.1.14 [David Zuelke]
+- ext-phalcon/5.1.4 [David Zuelke]
+- ext-blackfire/1.86.3 [David Zuelke]
+- ext-newrelic/10.5.0.317 [David Zuelke]
+
+### CHG
+
+- Build Nginx with `--with-http_auth_request_module` (#455) [David Zuelke]
+- Build Nginx with `--with-http_stub_status_module` (#598) [David Zuelke]
+- blackfire/2.13.2 [David Zuelke]
+- Composer/2.5.1 [David Zuelke]
+- Apache/2.4.55 [David Zuelke]
+
+## v227 (2022-11-03)
+
+### ADD
+
+- PHP/7.4.33 [David Zuelke]
+- ext-newrelic/10.3.0.315 [David Zuelke]
+- ext-phalcon/5.1.0 [David Zuelke]
+
+### CHG
+
+- Fail if platform packages dir is part of app source [David Zuelke]
+
+## v226 (2022-10-27)
+
+### ADD
+
+- PHP/8.0.25 [David Zuelke]
+- PHP/8.1.12 [David Zuelke]
+- ext-blackfire/1.84.0 [David Zuelke]
+- ext-mongodb/1.14.2 [David Zuelke]
+- ext-phalcon/5.0.5 [David Zuelke]
+
+### CHG
+
+- blackfire/2.13.0 [David Zuelke]
+- Composer/2.4.4 [David Zuelke]
+- Nginx/1.22.1 [David Zuelke]
+
+## v225 (2022-10-05)
+
+### ADD
+
+- PHP/7.4.32 [David Zuelke]
+- PHP/8.0.24 [David Zuelke]
+- PHP/8.1.11 [David Zuelke]
+- ext-blackfire/1.83.0 [David Zuelke]
+- ext-mongodb/1.14.1 [David Zuelke]
+- ext-newrelic/10.2.0.314 [David Zuelke]
+- ext-phalcon/5.0.2 [David Zuelke]
+
+### CHG
+
+- Composer/2.4.2 [David Zuelke]
+- blackfire/2.12.0 [David Zuelke]
+
+## v224 (2022-09-05)
+
+### ADD
+
+- ext-blackfire/1.81.0 [David Zuelke]
+- ext-phalcon/5.0.0RC4 [David Zuelke]
+- PHP/8.0.23 [David Zuelke]
+- PHP/8.1.10 [David Zuelke]
+
+### CHG
+
+- Composer/2.4.1 [David Zuelke]
+- Composer/2.2.18 [David Zuelke]
+- blackfire/2.10.1 [David Zuelke]
+
+## v223 (2022-08-04)
+
+### ADD
+
+- ext-phalcon/5.0.0RC3 [David Zuelke]
+- PHP/8.0.22 [David Zuelke]
+- PHP/8.1.9 [David Zuelke]
+- ext-mongodb/1.14.0 [David Zuelke]
+- ext-blackfire/1.80.0 [David Zuelke]
+
+### CHG
+
+- Composer/2.2.17 [David Zuelke]
+- Composer/2.3.10 [David Zuelke]
+- librdkafka/1.9.2 [David Zuelke]
+
+## v222 (2022-07-07)
+
+### ADD
+
+- PHP/8.0.21 [David Zuelke]
+- PHP/8.1.8 [David Zuelke]
+- ext-blackfire/1.79.0 [David Zuelke]
+- ext-newrelic/10.0.0.312 [David Zuelke]
+- ext-rdkafka/6.0.3 [David Zuelke]
+
+### CHG
+
+- Composer/2.2.16 [David Zuelke]
+- Composer/2.3.9 [David Zuelke]
+- Apache/2.4.54 [David Zuelke]
+- Nginx/1.22.0 [David Zuelke]
+- librdkafka/1.9.1 [David Zuelke]
+
+## v221 (2022-07-01)
+
+### CHG
+
+- Adjust curl connection timeout handling [Ed Morley]
+- Composer/2.2.15 [David Zuelke]
+- Composer/2.3.8 [David Zuelke]
+
+## v220 (2022-06-15)
+
+### CHG
+
+- Use recommended AWS regional S3 domain for interactions with platform repository buckets [Ed Morley, David Zuelke]
+
+## v219 (2022-06-09)
+
+### ADD
+
+- PHP/7.4.30 [David Zuelke]
+- PHP/8.0.20 [David Zuelke]
+- PHP/8.1.7 [David Zuelke]
+- ext-event/3.0.8 [David Zuelke]
+
+### CHG
+
+- Composer/2.2.14 [David Zuelke]
+- Composer/2.3.7 [David Zuelke]
+- blackfire/2.10.0 [David Zuelke]
+
+## v218 (2022-05-27)
+
+### ADD
+
+- Support for heroku-22 stack [David Zuelke]
+
+## v217 (2022-05-18)
+
+### ADD
+
+- PHP/8.0.19 [David Zuelke]
+- PHP/8.1.6 [David Zuelke]
+- ext-newrelic/9.21.0.311 [David Zuelke]
+- ext-blackfire/1.78.0 [David Zuelke]
+
+### CHG
+
+- blackfire/2.9.0 [David Zuelke]
+
+## v216 (2022-04-14)
+
+### ADD
+
+- PHP/7.4.29 [David Zuelke]
+- PHP/8.0.18 [David Zuelke]
+- PHP/8.1.5 [David Zuelke]
+- ext-blackfire/1.76.0 [David Zuelke]
+- ext-memcached/3.2.0 [David Zuelke]
+- ext-mongodb/1.13.0 [David Zuelke]
+
+### CHG
+
+- Composer/1.10.26 [David Zuelke]
+- Composer/2.2.12 [David Zuelke]
+- Composer/2.3.5 [David Zuelke]
+- blackfire/2.7.1 [David Zuelke]
+
+## v215 (2022-04-08)
+
+### CHG
+
+- Composer/2.3.4 [David Zuelke]
+
+## v214 (2022-04-04)
+
+### ADD
+
+- Composer/2.3.3 [David Zuelke]
+
+### CHG
+
+- Composer/2.2.11 [David Zuelke]
+
+## v213 (2022-03-17)
+
+### ADD
+
+- PHP/8.0.17 [David Zuelke]
+- PHP/8.1.4 [David Zuelke]
+- ext-blackfire/1.75.0 [David Zuelke]
+- ext-mongodb/1.12.1 [David Zuelke]
+- ext-newrelic/9.20.0.310 [David Zuelke]
+- ext-rdkafka/6.0.1 [David Zuelke]
+
+### CHG
+
+- Apache/2.4.53 [David Zuelke]
+- blackfire/2.7.0 [David Zuelke]
+- Composer/2.2.9 [David Zuelke]
+
+## v212 (2022-02-25)
+
+### CHG
+
+- Composer/2.2.7 [David Zuelke]
+
+## v211 (2022-02-22)
+
+### ADD
+
+- PHP/7.4.28 [David Zuelke]
+- PHP/8.0.16 [David Zuelke]
+- PHP/8.1.3 [David Zuelke]
+- ext-blackfire/1.74.1 [David Zuelke]
+- ext-redis/5.3.7 [David Zuelke]
+
+### CHG
+
+- blackfire/2.6.0 [David Zuelke]
+- Composer/2.2.6 [David Zuelke]
+
+## v210 (2022-02-11)
+
+### CHG
+
+- For any PHP extension declared as `provide`d by a userland package ("polyfill"), attempt explicit installation after main platform install succeeded [David Zuelke]
+
+## v209 (2022-02-10)
+
+(no changes; release bump for rolling out v208 repository update)
+
+## v208 (2022-02-10)
+
+### CHG
+
+- Treat shared PHP extensions the same as third-party extensions during installation e.g. if userland polyfills declare a `provide` for them [David Zuelke]
+
+## v207 (2022-02-07)
+
+### CHG
+
+- Allow control of Composer repository priority for entries in `$HEROKU_PHP_PLATFORM_REPOSITORIES` [David Zuelke]
+
+## v206 (2022-02-01)
+
+### ADD
+
+- PHP/8.0.15 [David Zuelke]
+- PHP/8.1.2 [David Zuelke]
+- ext-blackfire/1.73.0 [David Zuelke]
+- ext-imagick/3.7.0 [David Zuelke]
+- ext-pcov/1.0.11 [David Zuelke]
+- ext-phalcon/4.1.3 [David Zuelke]
+- ext-rdkafka/6.0.0 [David Zuelke]
+- ext-redis/5.3.6 [David Zuelke]
+- Apache/2.4.52 [David Zuelke]
+
+### CHG
+
+- Use Composer 2 for platform installation step [David Zuelke]
+- Composer/1.10.25 [David Zuelke]
+- Composer/2.2.5 [David Zuelke]
+
+### FIX
+
+- Userland packages declaring PHP extensions as provided cause platform installation failure [David Zuelke]
+
+## v205 (2022-01-07)
+
+### FIX
+
+- `symfony/polyfill-…` packages' `ext-…` `provide` declarations (added in v1.24) cause install failure (#528) [David Zuelke]
+
+## v204 (2022-01-03)
+
+### CHG
+
+- Composer/2.2.3 [David Zuelke]
+- Forward compatibility for Composer version selection [David Zuelke]
+
+## v203 (2021-12-17)
+
+## ADD
+
+- PHP/7.4.27 [David Zuelke]
+- PHP/8.0.14 [David Zuelke]
+- PHP/8.1.1 [David Zuelke]
+- ext-blackfire/1.72.0 [David Zuelke]
+- ext-mongodb/1.12.0 [David Zuelke]
+- ext-psr/1.1.0 (for PHP 7.2) [David Zuelke]
+- ext-psr/1.2.0 (for PHP 7.3+) [David Zuelke]
+
+## v202 (2012-12-10)
+
+### ADD
+
+- ext-amqp/1.11.0 [David Zuelke]
+- ext-blackfire/1.71.0 [David Zuelke]
+- ext-imagick/3.6.0 [David Zuelke]
+- ext-mongodb/1.11.1 [David Zuelke]
+- ext-pcov/1.0.10 [David Zuelke]
+- ext-rdkafka/5.0.2 [David Zuelke]
+- Nginx/1.20.2 [David Zuelke]
+- PHP/8.1.0 [David Zuelke]
+
+### CHG
+
+- blackfire/2.5.2 [David Zuelke]
+- Composer/2.1.14 [David Zuelke]
+- Composer/1.10.24 [David Zuelke]
+
+## v201 (2021-11-18)
+
+### ADD
+
+- PHP/7.3.33 [Ed Morley]
+- PHP/7.4.26 [Ed Morley]
+- PHP/8.0.13 [Ed Morley]
+
+## v200 (2021-10-28)
+
+### ADD
+
+- PHP/7.3.32 [David Zuelke]
+- PHP/7.4.25 [David Zuelke]
+- PHP/8.0.12 [David Zuelke]
+- ext-apcu/5.1.21 [David Zuelke]
+- ext-blackfire/1.69.0 [David Zuelke]
+
+### CHG
+
+- blackfire/2.5.1 [David Zuelke]
+- librdkafka/1.8.2 [David Zuelke]
+
+### FIX
+
+- Malformed `$COMPOSER_AUTH` causes app startup failure (#513) [David Zuelke]
+
+## v199 (2021-10-08)
+
+### ADD
+
+- Apache/2.4.51 [David Zuelke]
+
+### CHG
+
+- Composer/2.1.9 [David Zuelke]
+- Composer/1.10.23 [David Zuelke]
+
+## v198 (2021-09-28)
+
+### ADD
+
+- PHP/7.3.31 [David Zuelke]
+- PHP/7.4.24 [David Zuelke]
+- PHP/8.0.11 [David Zuelke]
+- ext-blackfire/1.67.0 [David Zuelke]
+- ext-ev/1.1.5 [David Zuelke]
+- ext-event/3.0.6 [David Zuelke]
+- ext-pq/2.2.0 [David Zuelke]
+- Apache/2.4.49 [David Zuelke]
+- blackfire/2.5.0 [David Zuelke]
+
+### CHG
+
+- Composer/2.1.8 [David Zuelke]
+- librdkafka/1.8.0 [David Zuelke]
+
+## v197 (2021-08-26)
+
+### ADD
+
+- ext-blackfire/1.65.0 [David Zuelke]
+- ext-mongodb/1.10.0 [David Zuelke]
+- PHP/7.3.30 [David Zuelke]
+- PHP/7.4.23 [David Zuelke]
+- PHP/8.0.10 [David Zuelke]
+- ext-newrelic/9.18.1.303 [David Zuelke]
+
+### CHG
+
+- Composer/2.1.6 [David Zuelke]
+
+## v196 (2021-07-30)
+
+### ADD
+
+- blackfire/2.4.3 [David Zuelke]
+- PHP/7.4.22 [David Zuelke]
+- PHP/8.0.9 [David Zuelke]
+- ext-ev/1.1.4 [David Zuelke]
+- ext-imagick/3.5.1 [David Zuelke]
+- ext-blackfire/1.64.0 [David Zuelke]
+
+### CHG
+
+- Composer/2.1.5 [David Zuelke]
+
+## v195 (2021-07-01)
+
+### ADD
+
+- PHP/7.3.29 [David Zuelke]
+- PHP/7.4.21 [David Zuelke]
+- PHP/8.0.8 [David Zuelke]
+- ext-blackfire/1.63.0 [David Zuelke]
+- Apache/2.4.48 [David Zuelke]
+
+### CHG
+
+- `$HEROKU_PHP_GRACEFUL_SIGTERM` now defaults to "1" on Heroku dynos to enable graceful shutdowns for PHP-FPM, Apache and Nginx [David Zuelke]
+- Composer/2.1.3 [David Zuelke]
+
+## v194 (2021-06-25)
+
+### ADD
+
+- blackfire/2.4.2 [David Zuelke]
+- ext-blackfire/1.62.0 [David Zuelke]
+- ext-imagick/3.5.0 [David Zuelke]
+
+### CHG
+
+- ext-blackfire installs blackfire agent as separate dependency [David Zuelke]
+- ext-blackfire will use blackfire agent from https://github.com/blackfireio/integration-heroku if present [David Zuelke]
+
+### FIX
+
+- ext-blackfire attempts to instrument during web dyno startup [David Zuelke]
+
+## v193 (2021-06-07)
+
+### ADD
+
+- ext-newrelic for PHP 8 [David Zuelke]
+- Nginx/1.20.1 [David Zuelke]
+- PHP/7.4.20 [David Zuelke]
+- PHP/8.0.7 [David Zuelke]
+- ext-pcov/1.0.9 [David Zuelke]
+- ext-mongodb/1.9.1 [David Zuelke]
+- ext-event/3.0.4 [David Zuelke]
+- ext-ev/1.1.2 [David Zuelke]
+- ext-apcu/5.1.20 [David Zuelke]
 
 ### CHG
 
 - Remove support for heroku-16 [David Zuelke]
 - Bump minimum supported PHP version to 7.1.x [David Zuelke]
+- librdkafka/1.7.0 [David Zuelke]
+- Composer/2.1.2 [David Zuelke]
 
 ## v192 (2021-05-06)
 

@@ -26,7 +26,7 @@ describe "A PHP application" do
     end
   end
 
-  it "have absolute buildpack paths" do
+  it "have absolute buildpack paths", :stack => ["heroku-18", "heroku-20"] do
     buildpacks = [
       :default,
       "https://github.com/sharpstone/force_absolute_paths_buildpack"
@@ -39,25 +39,24 @@ describe "A PHP application" do
   it "uses cache with ci" do
     app = new_app_with_stack_and_platrepo('test/fixtures/ci/devdeps')
     app.run_ci do |test_run|
-      expect(test_run.output).to match("mockery/mockery")
+      expect(test_run.output).to include("mockery/mockery")
       expect(test_run.output).to include("Downloading")
       test_run.run_again
-      expect(test_run.output).to include("Loading from cache")
       expect(test_run.output).to_not include("Downloading")
     end
-  end
+	end
 
-  it "should restore cached dependencies when changing stack", :stack => "heroku-18" do
+  it "should restore cached dependencies when changing stack", :stack => "heroku-20" do
     new_app_with_stack_and_platrepo("php-getting-started").deploy do |app|
-      expect(app.output).to_not include("Loading from cache")
+      expect(app.output).to include("Downloading")
 
-      app.update_stack("heroku-20")
+      app.update_stack("heroku-22")
       # we are changing the stack to heroku-20, so we also need to adjust the platform repository accordingly, otherwise, for tests running on branches where HEROKU_PHP_PLATFORM_REPOSITORIES is set to a value, the build would use the wrong repo
-      app.set_config({"HEROKU_PHP_PLATFORM_REPOSITORIES" => ENV["HEROKU_PHP_PLATFORM_REPOSITORIES"].sub("heroku-18", "heroku-20")}) if ENV["HEROKU_PHP_PLATFORM_REPOSITORIES"]
+      app.set_config({"HEROKU_PHP_PLATFORM_REPOSITORIES" => ENV["HEROKU_PHP_PLATFORM_REPOSITORIES"].sub("heroku-20", "heroku-22")}) if ENV["HEROKU_PHP_PLATFORM_REPOSITORIES"]
       app.commit!
       app.push!
 
-      expect(app.output).to include("Loading from cache")
+      expect(app.output).to_not include("Downloading")
     end
   end
 end
